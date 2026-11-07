@@ -1,74 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
+    android:background="#F5F5F5"
     android:padding="24dp"
-    android:background="#F5F5F5">
+    tools:context=".MainActivity">
 
-
+    <!-- כותרת ראשית -->
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="אדם שמעורר בי השראה"
-        android:textSize="22sp"
+        android:text="להיות ישראלי"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#333333"
-        android:layout_marginBottom="24dp" />
+        android:textColor="#0038B8"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- תמונה מרכזית -->
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/elon_musk"
-        android:layout_marginBottom="50px"
-        android:contentDescription="תמונת הדמות" />
+        android:id="@+id/israelImageView"
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/israelflag"
+        android:scaleType="centerCrop"
+        android:contentDescription="סמל או דגל המייצגים את ישראל"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- טקסט תיאור -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/descTextView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="אילון מאסק"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#23609D"
-        android:layout_marginBottom="8dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="יזם, ממציא ומייסד SpaceX ו-Tesla "
-        android:textSize="14sp"
-        android:textColor="#666666"
-        android:layout_marginBottom="24dp" />
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:text="להיות ישראלי זה להרגיש בבית בכל מקום, לחגוג יחד, להתנדב בעת צרה, ולחלוק תרבות עשירה המשלבת מסורת עם חדשנות ויצירתיות."
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:gravity="center"
         android:background="#FFFFFF"
         android:padding="16dp"
-        android:elevation="4dp">
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/israelImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="למה בחרתי בו?"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#333333"
-            android:layout_marginBottom="8dp"
-            android:gravity="right"
-            />
+    <!-- כפתור פעולה -->
+    <Button
+        android:id="@+id/actionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="שתף את התחושה שלך"
+        android:textSize="16sp"
+        android:backgroundTint="#0038B8"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/descTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="בחרתי באילון מאסק כי הוא מייצג חשיבה פורצת דרך אומץ והתמדה. הוא לא מפחד לקחת סיכונים ענקיים במקום שבו שאחרים נכשלו והצליח להפוך רעיונות שנראו כמו דמיון מודרך כמו חלליות לשימוש חוזר ומכוניות חשמליות מתקדמות למציאות. הסיפור שלו מלמד אותי לא להסס לקחת סיכונים ולעבוד קשה כדי להגשים את המטרות שלי."
-            android:textSize="14sp"
-            android:textColor="#444444"
-            android:lineSpacingExtra="4dp" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
