@@ -57,7 +57,7 @@
         android:id="@+id/actionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="שתף את התחושה שלך"
+        android:text="Button"
         android:textSize="16sp"
         android:backgroundTint="#0038B8"
         android:textColor="#FFFFFF"
