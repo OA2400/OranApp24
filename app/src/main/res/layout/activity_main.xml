@@ -7,9 +7,10 @@
     android:layout_height="match_parent"
     android:background="#F5F5F5"
     android:padding="24dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
-    <!-- כותרת ראשית -->
+
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
@@ -23,7 +24,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- תמונה מרכזית -->
     <ImageView
         android:id="@+id/israelImageView"
         android:layout_width="200dp"
@@ -36,7 +36,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- טקסט תיאור -->
     <TextView
         android:id="@+id/descTextView"
         android:layout_width="0dp"
@@ -52,8 +51,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- כפתור פעולה -->
     <Button
+        android:visibility="gone"
         android:id="@+id/actionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,5 +64,32 @@
         app:layout_constraintTop_toBottomOf="@+id/descTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/yellowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="#FFE90A"
+        android:text="Yellow"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descTextView" />
+
+    <Switch
+
+        android:id="@+id/swShowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:text="switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/yellowButton"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
