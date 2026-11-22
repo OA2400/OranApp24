@@ -8,52 +8,46 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
-Button actionButton;
-Button yellowButton;
-Switch swShowButton;
+import java.util.Random;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    TextView tvUserName;
+    Button btnSendMessage;
+    Button btnFollow;
+    Button btnMakeRandom;
+    Random randomNum = new Random();
+    int min = 0;
+    int max = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        tvUserName = findViewById(R.id.tvUserName);
+        btnSendMessage=findViewById(R.id.btnSendMessage);
+        btnFollow = findViewById(R.id.btnFollow);
 
-            actionButton = findViewById(R.id.actionButton);
-            actionButton.setOnClickListener(this);
-            yellowButton=findViewById(R.id.yellowButton);
-            yellowButton.setOnClickListener(this);
-            swShowButton = findViewById(R.id.swShowButton);
-            swShowButton.setOnCheckedChangeListener(this);
+        btnFollow.setOnClickListener(this);
+        btnSendMessage.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
-        Toast.makeText(this, "oran", Toast.LENGTH_SHORT).show();
+        int id = view.getId();
+        if (id == R.id.btnSendMessage) {
+            Toast.makeText(this, R.string.opening_chat, Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.btnFollow) {
+        Toast.makeText(this, R.string.started_following, Toast.LENGTH_SHORT).show();
+        btnFollow.setText(R.string.following);
     }
-
-    @Override
-    public void onCheckedChanged(@NonNull CompoundButton compoundButton, boolean b) {
-        if(b){
-            actionButton.setVisibility(VISIBLE);
-            Toast.makeText(this,"true", Toast.LENGTH_SHORT).show();
-
-            yellowButton.setVisibility(VISIBLE);
-            Toast.makeText(this,"true", Toast.LENGTH_SHORT).show();
-        }
-        else {
-            actionButton.setVisibility(INVISIBLE);
-            Toast.makeText(this,"true",Toast.LENGTH_SHORT).show();
-
-            yellowButton.setVisibility(INVISIBLE);
-            Toast.makeText(this,"true",Toast.LENGTH_SHORT).show();
-        }
     }
 }
