@@ -1,9 +1,10 @@
 <resources>
-    <string name="user_name">ישראל ישראלי</string>
-    <string name="send_message">שלח הודעה</string>
-    <string name="follow">עקוב</string>
-    <string name="following">במעקב</string>
-    <string name="opening_chat">פותח צ\'אט...</string>
-    <string name="started_following">התחלת לעקוב!</string>
+    <string name="guess_the_num">נחש את המספר</string>
+    <string name="make_a_guess">תכתוב פה את הניחוש שלך</string>
+    <string name="send_guess"> שלח ניחוש</string>
+    <string name="play_again">שחק שוב</string>
+    <string name="to_low_guess">המספר קטן מדי, נסה מספר גדול יותר ⬆️</string>
+    <string name="guessing_correct">כל הכבוד! גילית את המספר הנכון ב-%d צעדים!</string>
+    <string name="to_high_guess">המספר גדול מדי, נסה מספר קטן יותר ⬇️</string>
     <string name="app_name"></string>
 </resources>
